@@ -15,7 +15,12 @@
 
 # 準備
 
-[こちら](https://github.com/ytyaru/Hatena.Blog.API.Service.Get.201702281505)ではてなブログサービス文書を取得し、XMLファイル保存しておくこと。
+1. [こちら](https://github.com/ytyaru/Hatena.Blog.API.Service.Get.201702281505)ではてなブログサービス文書を取得し、XMLファイル保存する
+1. main.pyの以下の部分のパス`../resource....xml`を保存したパスに変更する
+
+```python
+soup = BeautifulSoup(self.__load_file("../resource/201702281505/ytyaru.ytyaru.hatenablog.com.Services.xml"), 'lxml')
+```
 
 # 実行
 
@@ -28,8 +33,8 @@ python3 main.py
 サービス文書XMLファイルから一部データを抜き取り、コンソールに表示される。
 
 * ブログのタイトル
-* <link rel=next>のhref属性値
-* <entry>の<title>テキストノード値
+* `<link rel=next>`の`href`属性値
+* `<entry><title>`のテキストノード値
 
 # ライセンス
 
@@ -38,8 +43,6 @@ python3 main.py
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
 
 なお、使用させていただいたライブラリは以下のライセンスである。感謝。
-
-なお、使用させていただいたPythonライブラリは以下のライセンスである。感謝。
 
 Library|License|Copyright
 -------|-------|---------
